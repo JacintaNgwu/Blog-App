@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -59,14 +58,6 @@
 - **[Create and manage blog posts]**
 - **[Read posts by other users]**
 - **[Interact by giving likes/comments]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [N/A](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
