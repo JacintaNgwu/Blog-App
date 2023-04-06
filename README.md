@@ -74,20 +74,28 @@ In order to run this project you need to have installed:
 - [Ruby 3.1.3 or higher](https://www.ruby-lang.org/en/)
 - [Rails 7.0.4 or higher](https://rubyonrails.org/)
 - [PostgreSQL 15.2 or higher](https://www.postgresql.org/)
+- [Git](https://git-scm.com/)
+- IDE (VSCode, Atom, Sublime, etc)
 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-[Git clone](https://github.com/JacintaNgwu/Blog-App.git)
+```sh
+cd preferred-folder
+
+git clone https://github.com/JacintaNgwu/Blog-App.git
+
+```
 
 ### Install
 
 Install this project with:
 
 ```sh
-  cd my-project
+  cd Blog-App
+
   bundle install
 ```
 
@@ -104,10 +112,8 @@ rails db:migrate
 
 To run the project, execute the following command:
 
-Example command:
-
 ```sh
-  rails server
+  rails server or rails s
 ```
 
 ### Run tests
@@ -116,7 +122,7 @@ To run tests, run the following command:
 
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec/
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
