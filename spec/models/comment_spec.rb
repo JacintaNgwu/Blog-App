@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let!(:user) { User.create(name: "Grace", photo: "image/photo.png", bio: "Doctor", posts_counter: 0) }
+  let!(:user) { User.create(name: 'Grace', photo: 'image/photo.png', bio: 'Doctor', posts_counter: 0) }
   let!(:post) do
-    Post.create(title: "My Blog", text: "Be Healthy", author: user, comments_counter: 0, likes_counter: 0)
-end
-  subject { described_class.create(text: "Nice", author: user, post:) }
+    Post.create(title: 'My Blog', text: 'Be Healthy', author: user, comments_counter: 0, likes_counter: 0)
+  end
+  subject { described_class.create(text: 'Nice', author: user, post:) }
 
   describe 'associations' do
     it 'should belong to correct user' do
