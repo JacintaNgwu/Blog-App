@@ -1,3 +1,3 @@
 class PagesController < ApplicationController
-    def hello; end
-    end
+  def hello; end
+end
