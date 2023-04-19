@@ -12,7 +12,6 @@ RSpec.describe 'Posts', type: :request do
     end
     before(:example) { get user_posts_path(user_id: 1) }
 
-
     it 'Should returns http success status' do
       expect(response).to have_http_status(:ok)
     end
