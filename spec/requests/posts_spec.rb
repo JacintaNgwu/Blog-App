@@ -1,15 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET #index" do
+RSpec.describe 'Posts', type: :request do
+  describe 'GET #index' do
     before(:each) do
-      user1 = User.create(name: 'Jacinta Ngwu', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer', posts_counter: 6)
-      user2 = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer', posts_counter: 6)
+      user1 = User.create(name: 'Jacinta Ngwu', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer',
+                          posts_counter: 6)
+      user2 = User.create(name: 'John Doe', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer',
+                          posts_counter: 6)
       Post.create(title: 'Post 1', text: 'This is post 1', author: user1)
       Post.create(title: 'Post 2', text: 'This is post 2', author: user2)
     end
     before(:example) { get user_posts_path(user_id: 1) }
-    
+
 
     it 'Should returns http success status' do
       expect(response).to have_http_status(:ok)
@@ -25,7 +27,7 @@ RSpec.describe "Posts", type: :request do
     end
   end
 
-  describe "GET #show" do
+  describe 'GET #show' do
     before(:example) { get user_posts_path(user_id: 1, id: 1) }
 
     it 'Should returns http success status' do
