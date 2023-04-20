@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text' do
-      get user_posts_path(1,1)
+      get user_posts_path(1, 1)
       expect(response.body).to include('<h1>Here is a list of all the posts</h1>')
     end
   end
@@ -32,7 +32,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text' do
-      get user_posts_path(1,1)
+      get user_posts_path(1, 1)
       expect(response.body).to include('<h1>Here is a list of all the posts</h1>')
     end
   end
