@@ -1,1 +1,14 @@
-<h1>Here is a list of all the posts</h1>
+<body>
+    <%= render "partials/user_container", user: @users_find %>
+        <%= render "partials/post_container", post: @posts %>
+        <% comments = Comment.where(post_id: @posts.id) %>
+        <% comments.each do |comment| %>
+          <article class="comments-box">
+            <% user = User.find_by(id: comment.author_id).name %>
+            <p><strong><%=user%>: <%= comment.text %></strong></p>
+          </article>
+        <% end %>
+        <%= link_to "/users/#{@users_find.id}/posts/#{@posts.id}" do %>
+    <button>Pagination</button>
+    <% end %>
+</body>
