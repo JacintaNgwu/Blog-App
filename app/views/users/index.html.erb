@@ -1,5 +1,5 @@
 <body>
-    <% @users_all.each do |user| %>
+    <% @users.each do |user| %>
         <%= link_to "/users/#{user.id}" do %>
         <%= render "partials/user_container", user: user %>
         <% end %>

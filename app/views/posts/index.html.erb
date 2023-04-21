@@ -1,14 +1,12 @@
 <body>
-    <%= render "partials/user_container", user: @users_find %>
-        <%= render "partials/post_container", post: @posts %>
-        <% comments = Comment.where(post_id: @posts.id) %>
-        <% comments.each do |comment| %>
-          <article class="comments-box">
-            <% user = User.find_by(id: comment.author_id).name %>
-            <p><strong><%=user%>: <%= comment.text %></strong></p>
-          </article>
-        <% end %>
-        <%= link_to "/users/#{@users_find.id}/posts/#{@posts.id}" do %>
-    <button>Pagination</button>
+    <%= render "partials/user_container", user: @users %>
+    <% @posts.each do |post| %>
+    <h3>Post Title: <%= @posts.title %></h3>
+    <p><%= @posts.text %></p>
+    <div class="block">
+        <p>Comments: <%= @posts.comments_counter %></p>
+        <p>Likes: <%= @posts.likes_counter %></p>
+    </div>
     <% end %>
+    <button>Pagination</button>
 </body>
