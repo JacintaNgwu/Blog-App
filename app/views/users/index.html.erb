@@ -1,7 +1,11 @@
-<body>
-    <% @users.each do |user| %>
-        <%= link_to "/users/#{user.id}" do %>
-        <%= render "partials/user_container", user: user %>
-        <% end %>
-    <% end %>
-</body>
+<section class= "all">
+  <% @users.each do |user| %>
+    <div class="user_container">
+   <img class="pic" src="<%= user.photo %>" alt="profile_pic">
+   <div class=>
+   <%= link_to user.name, user_path(user)%>
+  <p class="post-count">Number of posts: <%= user.posts_counter || 0 %></p>
+</div>
+   </div>
+  <% end %>
+</section>

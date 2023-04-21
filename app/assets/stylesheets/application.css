@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0 90px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8ff;
+  overflow: scroll;
+}
+
+.all {
+  margin: auto;
+  padding-top: 100px;
+}
+
+.user_container {
+  display: flex;
+  gap: 50px;
+}
+
+.pic {
+  width: 100px;
+  height: 100px;
+}
+
+.block-post {
+  border: 2px solid black;
+  width: 700px;
+  padding: 20px;
+}
+
+.post-heading {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}

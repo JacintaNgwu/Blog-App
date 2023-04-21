@@ -1,20 +1,13 @@
-<body>
-  <%= render "partials/user_container", user: @user %>
-        <article>
-            <h3>Bio</h3>
-            <p><%= @user.bio %></p>
-        </article>
+<img class="pic" src="<%= @user.photo %>" alt="profile_pic">
+<%= @user.name%>
 
-        <article>
-            <% @recent_posts.each do |post| %>
-            <%= link_to "Post ##{post.id}", user_post_path(user_id: post.author.id, id: post.id) , class: "post-heading" %>
-            <p><%= truncate(post.text, length: 110, omission: " . . .") %></p>
-            <div class="like-and-comment">
-              <p>Comments: <%= post.comment_counter || 0 %>, Likes: <%= post.like_counter || 0 %></p>
-            </div>
-              <% end %>
-        </article>
-        <%= link_to "/users/#{@user.id}/posts" do %>
-    <button>See all posts</button>
-    <% end %>
-</body>
+<%= @user.posts_counter%>
+
+<%= @user.bio%>
+
+<% @user.posts.each do |d|%>
+  <p> <%= d.title %></p>
+    <p> <%= d.text %></p>
+<%end%>
+
+<%= link_to "see all posts", user_posts_path(@user)%>

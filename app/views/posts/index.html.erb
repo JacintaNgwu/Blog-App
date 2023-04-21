@@ -1,12 +1,15 @@
-<body>
-    <%= render "partials/user_container", user: @users %>
-    <% @posts.each do |post| %>
-    <h3>Post Title: <%= @posts.title %></h3>
-    <p><%= @posts.text %></p>
-    <div class="block">
-        <p>Comments: <%= @posts.comments_counter %></p>
-        <p>Likes: <%= @posts.likes_counter %></p>
-    </div>
-    <% end %>
-    <button>Pagination</button>
-</body>
+<img class="pic" src="<%= @user.photo %>" alt="profile_pic">
+<%=@user.name %>
+<span>number of posts:  <%= @user.posts_counter%> </span>
+
+<% @posts.each do |post| %>
+
+<p><%= link_to post.title, user_post_path(@user,post)%></p>
+<p><%= post.text%></p>
+<p>comment:<%=post.comments_counter %></p>
+<p>likes:<%=post.likes_counter%></p>
+<h3> comments </h3>
+ <%post.comments.each do |comment|%>
+ <p><%=comment.author.name %>: <%=comment.text %></p>
+ <%end%>
+<%end%>
