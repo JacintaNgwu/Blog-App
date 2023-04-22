@@ -1,1 +1,23 @@
-<h1>Here is a specific post</h1>
+<body>
+    <article>
+    <div class="block-post">
+        <div class="post-heading">
+            <h3><%= @post.title %> by <%= @user.name %></h3>
+            <div class="post-comments">
+            <p>Comments: <%= @post.comments_counter %></p>
+            <p>Likes: <%= @post.likes_counter %></p>
+            </div>
+        </div>
+        <p><%= @post.text %></p>
+    </div>
+        
+    </article>
+
+    <article class="comments-box">
+    <% comments = Comment.where(post_id: @post.id) %>
+    <% comments.each do |comment| %>
+        <% user = User.find_by(id: comment.author_id).name %>
+        <p><strong><%= user %>: <%= comment.text %></strong></p>
+        <% end %>
+    </article>
+</body>
