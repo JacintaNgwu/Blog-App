@@ -2,7 +2,7 @@
 <img class="pic" src="<%= @user.photo %>" alt="profile_pic">
 <div class= "name">
 <%= @user.name%>
-<p class="post-count"><%= @user.posts_counter%>
+<p class="post-count">posts: <%= @user.posts_counter%>
 </div>
 </div>
 <div class="bio">
@@ -14,8 +14,8 @@
     <p class="title"> <%= d.title %></p>
     <p> <%= d.text %></p>
     <div class="counts">
-    <p class="likes-count"> <%= d.likes_counter%></p>, 
-    <p class="comments-count"> <%= d.comments_counter%></p>
+    <p class="likes-count">likes: <%= d.likes_counter%></p>, 
+    <p class="comments-count">Comments: <%= d.comments_counter%></p>
     </div>
   </div>
 <%end%>
