@@ -20,4 +20,13 @@
         <p><strong><%= user %>: <%= comment.text %></strong></p>
         <% end %>
     </article>
+
+    <div class="btn">
+    <%= link_to new_user_post_comment_path(post_id: params[:id]) do%>
+        <button>Add comments</button>
+     <% end %>
+    <%= link_to new_user_post_like_path(post_id: params[:id]) do%>
+        <button>Like</button>
+     <% end %>
+    </div>
 </body>
