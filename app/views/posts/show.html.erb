@@ -3,13 +3,14 @@
     <div class="block-post">
         <div class="post-heading">
             <h3><%= @post.title %> by <%= @user.name %></h3>
-        </div>
-        <div class="post-comments">
+            <div class="post-comments">
             <p>Comments: <%= @post.comments_counter %></p>
             <p>Likes: <%= @post.likes_counter %></p>
+            </div>
         </div>
-    </div>
         <p><%= @post.text %></p>
+    </div>
+        
     </article>
 
     <article class="comments-box">

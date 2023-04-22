@@ -2,7 +2,7 @@
   <% @users.each do |user| %>
     <div class="user_container">
    <img class="pic" src="<%= user.photo %>" alt="profile_pic">
-   <div class=>
+   <div class= "name">
    <%= link_to user.name, user_path(user)%>
   <p class="post-count">Number of posts: <%= user.posts_counter || 0 %></p>
 </div>

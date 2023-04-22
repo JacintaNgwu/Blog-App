@@ -1,15 +1,26 @@
+<div class="show_container">
 <img class="pic" src="<%= @user.photo %>" alt="profile_pic">
-<%=@user.name %>
-<span>number of posts:  <%= @user.posts_counter%> </span>
-
+<div class= "name"><%=@user.name %>
+<span class="post-count">number of posts:  <%= @user.posts_counter%> </span>
+</div>
+</div>
+<div class="posts">
 <% @posts.each do |post| %>
-
-<p><%= link_to post.title, user_post_path(@user,post)%></p>
+<div class="post">
+<p class="title"><%= link_to post.title, user_post_path(@user,post)%></p>
 <p><%= post.text%></p>
-<p>comment:<%=post.comments_counter %></p>
-<p>likes:<%=post.likes_counter%></p>
+<div class="counts">
+<p class="comments-count">comment:<%=post.comments_counter %></p>,
+<p class="likes-count">likes:<%=post.likes_counter%></p>
+</div>
+</div>
+<div class="comments">
 <h3> comments </h3>
  <%post.comments.each do |comment|%>
  <p><%=comment.author.name %>: <%=comment.text %></p>
  <%end%>
+ </div>
 <%end%>
+<button class="page">
+ <%= link_to "Pagination" %>
+ </button>

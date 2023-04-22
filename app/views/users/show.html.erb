@@ -1,13 +1,25 @@
+<div class="show_container">
 <img class="pic" src="<%= @user.photo %>" alt="profile_pic">
+<div class= "name">
 <%= @user.name%>
-
-<%= @user.posts_counter%>
-
+<p class="post-count"><%= @user.posts_counter%>
+</div>
+</div>
+<div class="bio">
 <%= @user.bio%>
-
+</div>
+<div class="posts">
 <% @user.posts.each do |d|%>
-  <p> <%= d.title %></p>
+    <div class="post">
+    <p class="title"> <%= d.title %></p>
     <p> <%= d.text %></p>
+    <div class="counts">
+    <p class="likes-count"> <%= d.likes_counter%></p>, 
+    <p class="comments-count"> <%= d.comments_counter%></p>
+    </div>
+  </div>
 <%end%>
-
+</div>
+<button class="see_all">
 <%= link_to "see all posts", user_posts_path(@user)%>
+</button>
