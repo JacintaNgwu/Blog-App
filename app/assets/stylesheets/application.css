@@ -69,10 +69,8 @@ body {
 }
 
 .post-count {
-padding-top: 40px;
+  padding-top: 40px;
 }
-
-
 
 .show_container {
   display: flex;
@@ -146,7 +144,7 @@ padding-top: 40px;
   color: black;
 }
 
-.page{
+.page {
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
