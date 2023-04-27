@@ -3,7 +3,7 @@
     <article>
     <div class="block-post">
         <div class="post-heading">
-            <h3><%= @post.title %> by <%= @user.name %></h3>
+            <h3><%= @post.title %> by <%= @post.author.name %></h3>
             <div class="post-comments">
             <p>Comments: <%= @post.comments_counter %></p>
             <p>Likes: <%= @post.likes_counter %></p>
@@ -11,7 +11,7 @@
         </div>
         <p><%= @post.text %></p>
     </div>
-        
+
     </article>
 
     <article class="comments-box">
@@ -23,11 +23,12 @@
     </article>
 
     <div class="btn">
-    <%= link_to new_user_post_comment_path(post_id: params[:id]) do%>
-        <button>Add comments</button>
-     <% end %>
-    <%= link_to new_user_post_like_path(post_id: params[:id]) do%>
-        <button>Like</button>
-     <% end %>
+     <%= form_with url: "/posts/#{@post.id}/comments", scope: :comments do |f| %>
+	<%= f.text_field :text, placeholder: "Type something here...", rows: 5, required: true %>
+	<%= f.submit "Comment" %>
+   <% end %>
+            <%= form_with url: "/posts/#{@post.id}/likes", scope: :like do |f| %>
+        <%= f.submit "Like this post" %>
+      <% end %>
     </div>
 </body>
