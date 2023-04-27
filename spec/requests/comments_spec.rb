@@ -7,7 +7,7 @@ RSpec.describe 'Comments', type: :request do
                           photo: 'https://picsum.photos/200/500',
                           bio: 'Teacher from Mexico', posts_counter: 0)
 
-      @post1 = Post.create(author: @user, title: 'Timmy Jimmy', text: 'Hey Jimmy jimmy', likes_counter: 0,
+      @post1 = Post.create(author: @user, title: 'wassup spursy', text: 'Levy is the GOAT', likes_counter: 0,
                            comments_counter: 0)
 
       @comment1 = Comment.create(author: @user, post: @post1, text: 'Hi guys')

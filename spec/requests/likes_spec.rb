@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Likes', type: :request do
   describe 'GET /new' do
     before(:example) do
-      @user = User.create(name: 'Jacinta Ezinwa', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer', posts_counter: 6)
+      @user = User.create(name: 'Jacinta Ezinwa', photo: 'https://picsum.photos/200/300', bio: 'Full Stack Developer',
+                          posts_counter: 6)
 
       @post1 = Post.create(author: @user, title: 'Dudes', text: 'Theon Greyjoy', likes_counter: 0,
                            comments_counter: 0)
