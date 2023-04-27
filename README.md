@@ -137,6 +137,11 @@ To run tests, run the following command:
 - Twitter: [@jacinta_ngwu](https://twitter.com/jacinta_ngwu)
 - LinkedIn: [jacinta_ngwu](https://www.linkedin.com/in/jacintangwu/)
 
+👤 **Juwon DanieL Adesanya**
+
+- GitHub: [@githubhandle](https://github.com/Ade179)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/adejuwon-adesanya-237b54239/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
