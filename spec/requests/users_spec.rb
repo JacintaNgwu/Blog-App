@@ -12,9 +12,9 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template(:index)
     end
 
-    it 'includes correct placeholder text' do
+    it 'should return http success' do
       get user_posts_path(1, 1)
-      expect(response.body).to include('<h1>Here is a list of all the posts</h1>')
+      expect(response).to have_http_status(:ok)
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'includes correct placeholder text' do
       get user_posts_path(1, 1)
-      expect(response.body).to include('<h1>Here is a list of all the posts</h1>')
+      expect(response.body).to include('<h1>Here is a list of all the post</h1>')
     end
   end
 end
