@@ -4,7 +4,7 @@ RSpec.describe 'Comments', type: :request do
   describe 'GET /show' do
     before(:example) do
       @user = User.create(name: 'Tom',
-                          photo: 'https://picsum.photos/200/500',
+                          photo: 'https://picsum.photos/300/200',
                           bio: 'Teacher from Mexico', posts_counter: 0)
 
       @post1 = Post.create(author: @user, title: 'wassup spursy', text: 'Levy is the GOAT', likes_counter: 0,
