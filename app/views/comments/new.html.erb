@@ -1,5 +1,0 @@
-<%= form_with model: @comment, url: user_post_comments_path, method: :post, local: true, class: "container"  do |f| %>
-    <%= f.label :text, "comment" %>
-    <%= f.text_area :text %>
-    <%= f.submit %>
-  <% end %>
